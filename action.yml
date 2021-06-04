@@ -31,6 +31,10 @@ inputs:
     description: '`true` to skip setting static pages related configuration. `indexPage`, `notFoundPage` will not be used.'
     required: false
     default: 'false'
+  DeleteDirs:
+    description: 'directories to be deleted before upload, default will delete all'
+    required: false
+    default: '/'
   indexPage:
     description: 'index page'
     required: false
@@ -63,6 +67,7 @@ runs:
     FOLDER: ${{ inputs.folder }}
     EXCLUDE: ${{ inputs.exclude }}
     SKIP_SETTING: ${{ inputs.skipSetting }}
+    DELETE_DIRS: ${{ input.DeleteDirs }}
     INDEX_PAGE: ${{ inputs.indexPage }}
     NOT_FOUND_PAGE: ${{ inputs.notFoundPage }}
     HTML_CACHE_CONTROL: ${{ inputs.htmlCacheControl }}

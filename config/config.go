@@ -39,6 +39,7 @@ func init() {
 	AccessKeySecret = os.Getenv("ACCESS_KEY_SECRET")
 	Folder = os.Getenv("FOLDER")
 	Exclude = utils.GetActionInputAsSlice(os.Getenv("EXCLUDE"))
+	Delete = utils.GetActionInputAsSlice(os.Getenv("DELETE_DIRS"))
 	BucketName = os.Getenv("BUCKET")
 	SkipSetting = os.Getenv("SKIP_SETTING") == "true"
 

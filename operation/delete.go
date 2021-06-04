@@ -46,6 +46,10 @@ func DeleteObjects(bucket *oss.Bucket) []error {
 	return nil
 }
 
+func DeleteDirs(bucket *oss.Bucket) []error {
+
+}
+
 func delete(bucket *oss.Bucket, key string) error {
 	err := bucket.DeleteObject(key)
 	if err != nil {
